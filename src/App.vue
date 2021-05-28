@@ -1,18 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <!-- {{allTodos}} -->
+<router-view></router-view>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <HomePage msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import initExternalUtil from '@/includes/external';
+
 
 export default {
+data(){
+    return{}
+  },
+methods:{
+ 
+},
+
+
+mounted(){
+   initExternalUtil();
+},
+
+updated(){
+   initExternalUtil();
+},
+
   name: 'App',
   components: {
-    HelloWorld
+    // HomePage
   }
+ 
 }
 </script>
 
